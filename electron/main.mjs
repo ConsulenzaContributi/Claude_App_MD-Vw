@@ -46,11 +46,18 @@ async function walkMarkdownFiles(directory) {
 
 function createMenuBarImage() {
   const svg = `
-    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-      <path
+    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+      <text
+        x="1.2"
+        y="13.2"
         fill="black"
-        d="M3 4.25C3 3.56 3.56 3 4.25 3h2.17c.49 0 .94.29 1.14.74L9.1 7.21l1.55-3.47A1.25 1.25 0 0 1 11.79 3h1.96C14.44 3 15 3.56 15 4.25v9.5c0 .69-.56 1.25-1.25 1.25a1.25 1.25 0 0 1-1.25-1.25V7.67l-2 4.34c-.21.45-.66.74-1.16.74s-.95-.29-1.16-.74l-1.68-3.63v5.37c0 .69-.56 1.25-1.25 1.25A1.25 1.25 0 0 1 3 13.75v-9.5Zm9.84 10.5c-.63 0-1.16-.5-1.16-1.13 0-.27.1-.54.3-.75l2.28-2.47h-1.47c-.63 0-1.14-.51-1.14-1.14s.51-1.14 1.14-1.14h3.84c.63 0 1.13.5 1.13 1.13 0 .28-.1.55-.28.76l-2.27 2.46h1.58c.63 0 1.14.51 1.14 1.14s-.51 1.14-1.14 1.14h-3.95Z"
-      />
+        font-family="SF Pro Display, SF Pro Text, Helvetica Neue, Arial, sans-serif"
+        font-size="12.5"
+        font-weight="700"
+        letter-spacing="-0.65"
+      >
+        MD
+      </text>
     </svg>
   `
 
@@ -58,7 +65,7 @@ function createMenuBarImage() {
     `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`,
   )
   image.setTemplateImage(true)
-  return image.resize({ width: 18, height: 18 })
+  return image.resize({ width: 24, height: 18 })
 }
 
 function showMainWindow() {
