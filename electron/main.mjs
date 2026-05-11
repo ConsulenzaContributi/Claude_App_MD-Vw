@@ -47,17 +47,14 @@ async function walkMarkdownFiles(directory) {
 function createMenuBarImage() {
   const svg = `
     <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-      <text
-        x="1.2"
-        y="13.2"
+      <path
+        d="M2.4 13.8V4.2h1.8l2.5 4.4 2.5-4.4h1.8v9.6H9.3V7.7L7.1 11.5H6.2L4 7.7v6.1H2.4Z"
         fill="black"
-        font-family="SF Pro Display, SF Pro Text, Helvetica Neue, Arial, sans-serif"
-        font-size="12.5"
-        font-weight="700"
-        letter-spacing="-0.65"
-      >
-        MD
-      </text>
+      />
+      <path
+        d="M13.2 13.8V4.2h3.2c3.2 0 5.2 1.8 5.2 4.8s-2 4.8-5.2 4.8h-3.2Zm1.9-1.6h1.2c2.1 0 3.4-1.2 3.4-3.2s-1.3-3.2-3.4-3.2h-1.2v6.4Z"
+        fill="black"
+      />
     </svg>
   `
 
@@ -116,6 +113,9 @@ async function dispatchLibraryFiles(files) {
 function createTray() {
   tray = new Tray(createMenuBarImage())
   tray.setToolTip('md Vw')
+  if (process.platform === 'darwin') {
+    tray.setTitle('MD')
+  }
   tray.setContextMenu(
     Menu.buildFromTemplate([
       {
