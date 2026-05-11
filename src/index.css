@@ -1,0 +1,84 @@
+:root {
+  --bg: #f3ede2;
+  --app-bg: #f3ede2;
+  --panel: rgba(255, 251, 245, 0.76);
+  --page: #fffdf8;
+  --card: rgba(255, 252, 247, 0.92);
+  --card-active: rgba(245, 231, 208, 0.92);
+  --input: rgba(255, 252, 246, 0.92);
+  --soft-button: #efe4d2;
+  --text: #453a2f;
+  --heading: #201813;
+  --muted: #7a6959;
+  --border: rgba(103, 78, 48, 0.16);
+  --accent: #9f6a2e;
+  --accent-border: rgba(159, 106, 46, 0.34);
+  --accent-contrast: #fff9f1;
+  --code-inline: rgba(159, 106, 46, 0.09);
+  --code-block: #f4ecdf;
+  --panel-shadow: 0 24px 70px rgba(86, 61, 34, 0.11);
+
+  --sans: 'Avenir Next', 'Helvetica Neue', 'Segoe UI', sans-serif;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+  --mono: 'SFMono-Regular', 'SF Mono', Menlo, Consolas, monospace;
+
+  font-family: var(--sans);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 40%),
+    linear-gradient(180deg, #efe7da 0%, #f5efe6 48%, #eee3d2 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='ink'] {
+  --bg: #181512;
+  --app-bg: #181512;
+  --panel: rgba(31, 27, 23, 0.84);
+  --page: #211c18;
+  --card: rgba(38, 34, 29, 0.94);
+  --card-active: rgba(72, 54, 37, 0.94);
+  --input: rgba(37, 33, 28, 0.94);
+  --soft-button: #2c251f;
+  --text: #d7cbbb;
+  --heading: #fbf3e7;
+  --muted: #a5947f;
+  --border: rgba(240, 225, 204, 0.11);
+  --accent: #d2a76f;
+  --accent-border: rgba(210, 167, 111, 0.32);
+  --accent-contrast: #1f1914;
+  --code-inline: rgba(210, 167, 111, 0.12);
+  --code-block: #29231d;
+  --panel-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background: var(--bg);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(159, 106, 46, 0.2);
+}
