@@ -111,7 +111,12 @@ async function dispatchLibraryFiles(files) {
 }
 
 function createTray() {
-  tray = new Tray(createMenuBarImage())
+  const trayImage =
+    process.platform === 'darwin'
+      ? nativeImage.createEmpty()
+      : createMenuBarImage()
+
+  tray = new Tray(trayImage)
   tray.setToolTip('md Vw')
   if (process.platform === 'darwin') {
     tray.setTitle('MD')

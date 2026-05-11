@@ -54,12 +54,13 @@ const DEFAULT_PREFERENCES: Preferences = {
 
 const CHANGELOG = [
   {
-    version: '0.5.0',
+    version: '0.5.1',
     title: 'Refactor editoriale',
     notes: [
       'Impaginazione a colonna unica e rimozione dei controlli grafici superflui.',
       'Ricerca con highlight, conteggio risultati e navigazione tra match.',
       'Focus mode, preferenze, changelog interno e outline compattabile.',
+      'Tray macOS aggiornato con monogramma testuale MD piu affidabile.',
     ],
   },
   {

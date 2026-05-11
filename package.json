@@ -2,7 +2,7 @@
   "name": "md-vw",
   "productName": "md Vw",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Reader Markdown per macOS con menu bar, avvio automatico e associazione ai file md.",
   "author": "OpenAI Codex",
   "type": "module",
